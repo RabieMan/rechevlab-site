@@ -35,10 +35,20 @@ nav{margin-inline-start:auto;display:flex;gap:14px;font-size:14px}a{color:#9ccbf
 h2{margin:44px 0 6px;font-size:22px}.note{color:var(--mut);font-size:13px;margin-top:30px}
 section[lang=en]{direction:ltr;text-align:left;border-top:1px solid var(--line);margin-top:50px}
 footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;color:var(--mut);font-size:13px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}footer .by{display:flex;align-items:center;gap:10px;color:#dfe6ee;font-weight:600}footer .by img{width:40px;height:40px;border-radius:50%}
+
+.lang{margin-inline-start:auto;display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:3px}
+.lang button{background:none;border:0;color:var(--mut);font:inherit;font-size:14px;font-weight:700;padding:6px 12px;border-radius:18px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#ffb02e;color:#0b0f14}
+@media (max-width:480px){header{gap:8px}header img{width:40px;height:40px}header b{font-size:20px}.lang button{padding:5px 8px;font-size:12.5px}}
+html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l="en"]),html[lang="ar"] [data-l]:not([data-l="ar"]){display:none!important}
+[data-l="en"]{text-align:left}[data-l="en"] .hero{text-align:center}
+[data-l="en"] .f.soon b::after{content:" · soon"}[data-l="ar"] .f.soon b::after{content:" · قريبًا"}
 </style>
 </head>
 <body><div class="wrap">
-<header><img src="img/icon.png" alt=""><b>רכב לאב</b><nav><a href="#en">English</a><a href="privacy.html">מדיניות פרטיות · Privacy</a><a href="terms.html">תנאי שימוש · Terms</a></nav></header>
+<header><img src="img/icon.png" alt=""><b><span data-l="he">רכב לאב</span><span data-l="ar" dir="ltr">RechevLab</span><span data-l="en">RechevLab</span></b><div class="lang" role="group" aria-label="Language / שפה / اللغة"><button type="button" data-set="he" aria-pressed="true">עברית</button><button type="button" data-set="ar" aria-pressed="false">العربية</button><button type="button" data-set="en" aria-pressed="false">English</button></div></header>
+
+<div data-l="he">
 
 <div class="hero">
  <h1>כל מה שצריך לדעת על רכב, באפליקציה אחת</h1>
@@ -64,10 +74,38 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;color:v
  <div class="f"><span>📄</span><b>דוח PDF</b><p>כל דוח רכב נשמר כקובץ PDF מסודר, לשליחה בוואטסאפ או במייל לפני קנייה.</p></div>
 </div>
 <p class="note">ללא הרשמה, ללא פרסומות וללא איסוף מידע אישי. המידע מגיע ממאגרי המידע הפתוחים של משרד התחבורה (data.gov.il). האפליקציה אינה רשמית ואינה מחליפה בדיקה מקצועית. צילומי המסך מציגים נתוני הדגמה. שמות היצרנים והדגמים הם סימני מסחר של בעליהם ומשמשים לזיהוי בלבד; רכב לאב אינה קשורה ליצרניות או ליבואנים.</p>
+</div>
 
-<section lang="en" id="en">
- <h2>Everything about a car, in one app</h2>
+<div data-l="ar">
+<div class="hero">
+ <h1>كل ما تحتاج معرفته عن السيارة، في تطبيق واحد</h1>
+ <p>فحص السيارة حسب رقم الترخيص أو رقم الشاصي، الاستدعاءات، سعر القائمة، فحص شارة الإعاقة، تقرير PDF للمشاركة، تذكيرات بتجديد الترخيص وورشة ثلاثية الأبعاد تشرح كل قطعة. بالعربية والعبرية والإنجليزية.</p>
+ <div class="badge">قريبًا على Google Play</div>
+</div>
+
+<div class="vid" data-yt="1lW4trNxEYA" style="background-image:url(img/promo-poster.jpg)" role="button" tabindex="0" aria-label="شاهد الفيديو – RechevLab"><button class="pl" aria-label="Play"></button><small>شاهد الفيديو · 36 ثانية · يُحمَّل من YouTube عند الضغط</small></div>
+ <div class="shots two"><img src="img/01-home-ar.jpg" alt="الشاشة الرئيسية"><img src="img/02-plate-report-ar.jpg" alt="تقرير حسب رقم الترخيص"><img src="img/06-reminders-ar.jpg" alt="تذكير بتجديد الترخيص"><img src="img/10-tag-ar.jpg" alt="فحص شارة الإعاقة"></div>
+ <div class="grid">
+  <div class="f"><span>🔎</span><b>فحص حسب رقم الترخيص</b><p>بالكتابة أو بالمسح بالكاميرا: الحالة، الفحص السنوي وسريان الترخيص، الكيلومترات، تاريخ الملكية، التغييرات، الاستدعاءات المفتوحة، سعر القائمة للسيارة الجديدة، خطّاف السحب، قدرة السحب والتجهيزات.</p></div>
+  <div class="f"><span>🛒</span><b>فحص قبل الشراء</b><p>كشف الاشتباه بإرجاع عدّاد الكيلومترات، مقارنة السعر المطلوب بالتقدير، وقائمة فحوص قبل إتمام الصفقة.</p></div>
+  <div class="f"><span>🚗</span><b>سياراتي</b><p>تذكيرات بتجديد الترخيص وتنبيه عند استدعاء جديد. كل شيء يُحفظ في الهاتف فقط.</p></div>
+  <div class="f"><span>🇮🇱</span><b>الطراز على طرق إسرائيل</b><p>عدد السيارات على الطريق، المبيعات، الإطارات الشائعة، مستوى الأمان وكل الاستدعاءات، حسب بيانات وزارة المواصلات.</p></div>
+  <div class="f"><span>🧰</span><b>ورشة ثلاثية الأبعاد</b><p>تفكيك السيارة إلى قطع مع شرح لكل قطعة وأعراض الأعطال وموعد الصيانة. يمكنك أيضًا تحميل نموذج ثلاثي الأبعاد خاص بك (GLB) – يبقى الملف في هاتفك.</p></div>
+  <div class="f"><span>🩺</span><b>ما العطل؟</b><p>اختر عَرَضًا وشاهد القطع المشتبه بها على السيارة.</p></div>
+  <div class="f"><span>♿</span><b>شارة الإعاقة ورقم الشاصي</b><p>فحص سريع إذا كانت للسيارة شارة إعاقة ومتى صدرت، والبحث عن سيارة حسب رقم الشاصي (VIN) عندما لا يوجد رقم ترخيص.</p></div>
+  <div class="f"><span>📄</span><b>تقرير PDF</b><p>كل تقرير سيارة يُحفظ كملف PDF مرتّب، لإرساله في واتساب أو بالبريد قبل الشراء.</p></div>
+ </div>
+ <p class="note">بدون تسجيل، بدون إعلانات وبدون جمع معلومات شخصية. المعلومات من قواعد البيانات المفتوحة لوزارة المواصلات (data.gov.il). التطبيق ليس رسميًا ولا يغني عن فحص مهني. لقطات الشاشة تعرض بيانات توضيحية. أسماء الشركات المصنّعة والطرازات علامات تجارية لأصحابها وتُستخدم للتعريف فقط؛ RechevLab غير مرتبط بأي شركة مصنّعة أو مستورد.</p>
+</div>
+
+<div data-l="en" dir="ltr">
+<div class="hero">
+ <h1>Everything about a car, in one app</h1>
  <p>Lookup by licence plate or VIN, recalls, list prices, disability-tag check, a shareable PDF report, licence-renewal reminders and a 3D workshop that explains every part. In Hebrew, Arabic and English.</p>
+ <div class="badge">Coming soon on Google Play</div>
+</div>
+
+<div class="vid" data-yt="1lW4trNxEYA" style="background-image:url(img/promo-poster.jpg)" role="button" tabindex="0" aria-label="Watch the video – RechevLab"><button class="pl" aria-label="Play"></button><small>Watch the video · 36 seconds · loads from YouTube on click</small></div>
  <div class="shots two"><img src="img/08-home-en.jpg" alt="Home"><img src="img/09-plate-report-en.jpg" alt="Plate report"><img src="img/06-reminders-en.jpg" alt="Licence renewal reminder"><img src="img/10-tag-en.jpg" alt="Disability tag check"></div>
  <div class="grid">
   <div class="f"><span>🔎</span><b>Plate lookup</b><p>Typed or scanned with the camera: status, test and licence validity, mileage, ownership history, recorded changes, open recalls, list price when new, tow hook, towing capacity and equipment.</p></div>
@@ -80,9 +118,21 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;color:v
   <div class="f"><span>📄</span><b>PDF report</b><p>Save any car report as a clean PDF to send on WhatsApp or by email before you buy.</p></div>
  </div>
  <p class="note">No sign-up, no ads, no personal data collected. Data comes from the Israeli Ministry of Transport open data (data.gov.il). Not an official app; it does not replace a professional inspection. Screenshots show demo data. Manufacturer and model names are trademarks of their owners, used for identification only; RechevLab is not affiliated with any manufacturer or importer.</p>
-</section>
+</div>
 
-<footer><span class="by"><img src="img/rabieman-labs.webp" alt="RabieMan Labs logo" width="40" height="40">© 2026 RabieMan Labs</span><a href="privacy.html">מדיניות פרטיות / Privacy policy</a><a href="terms.html">תנאי שימוש / Terms of use</a><a href="https://rabieman.github.io/accessibility.html">הצהרת נגישות / Accessibility</a><span><a href="mailto:rabieman.labs+rechevlab@gmail.com">rabieman.labs+rechevlab@gmail.com</a></span></footer>
+<footer><span class="by"><img src="img/rabieman-labs.webp" alt="RabieMan Labs logo" width="40" height="40">© 2026 RabieMan Labs</span><a class="lg" href="privacy.html"><span data-l="he">מדיניות פרטיות</span><span data-l="ar">سياسة الخصوصية</span><span data-l="en">Privacy policy</span></a><a class="lg" href="terms.html"><span data-l="he">תנאי שימוש</span><span data-l="ar">شروط الاستخدام</span><span data-l="en">Terms of use</span></a><a href="https://rabieman.github.io/accessibility.html"><span data-l="he">הצהרת נגישות</span><span data-l="ar">بيان إمكانية الوصول</span><span data-l="en">Accessibility statement</span></a><span><a href="mailto:rabieman.labs+rechevlab@gmail.com">rabieman.labs+rechevlab@gmail.com</a></span></footer>
 </div><script>document.querySelectorAll('.vid').forEach(v=>{const go=()=>{v.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+v.dataset.yt+'?autoplay=1&rel=0" title="RechevLab" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';v.style.cursor='default'};v.addEventListener('click',go,{once:true});v.addEventListener('keydown',e=>{if(e.key==='Enter')go()})})</script>
+<script>
+(function(){
+ var root=document.documentElement,btns=document.querySelectorAll('.lang button');
+ var TITLES={he:'RechevLab – בדיקת רכב לפי מספר רישוי ומוסך תלת-ממד',ar:'RechevLab – فحص السيارة حسب رقم الترخيص وورشة ثلاثية الأبعاد',en:'RechevLab – Car lookup by licence plate and a 3D workshop'};
+ function set(l){root.lang=l;root.dir=l==='en'?'ltr':'rtl';document.title=TITLES[l];btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});
+  document.querySelectorAll('a.lg').forEach(function(a){a.href=a.getAttribute('href').split('?')[0]+'?lang='+l});try{localStorage.setItem('rl_lang',l)}catch(e){}}
+ var q=new URLSearchParams(location.search).get('lang'),h=location.hash.slice(1),saved=null;try{saved=localStorage.getItem('rl_lang')}catch(e){}
+ var nav=(navigator.language||'he').toLowerCase(),ok=function(x){return x==='he'||x==='ar'||x==='en'};
+ set(ok(q)?q:ok(h)?h:ok(saved)?saved:nav.indexOf('he')===0||nav.indexOf('iw')===0?'he':nav.indexOf('ar')===0?'ar':'en');
+ btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+})();
+</script>
 </body>
 </html>
