@@ -1,5 +1,7 @@
 # RechevLab (רכב לאב) – site
 
+**RechevLab by RabieMan Labs — Interactive 3D Automotive Encyclopedia & Diagnostics**
+
 Public website of the RechevLab Android app by [RabieMan Labs](https://rabieman.github.io/), served by GitHub Pages.
 
 ## Pages
